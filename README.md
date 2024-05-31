@@ -1,7 +1,7 @@
 
 <div align="center">
   <h1>Hand Gesture Volume Control Using Python</h1>
-  <img alt="output" src="Images/HG.mp4" />
+  <img alt="output" src="Images/HG.gif" />
  </div>
 
 > This Project uses Python and some modules to control System Volume 

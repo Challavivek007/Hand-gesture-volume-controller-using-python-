@@ -201,5 +201,5 @@ cv2.destroyAllWindows()
 ***
 
 <div align = "center">
-    <h2>THANK YOU</h2>
+    <h2>THANK YOU 🙏</h2>
 </div>

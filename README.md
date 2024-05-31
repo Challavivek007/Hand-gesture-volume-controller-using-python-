@@ -58,7 +58,7 @@ Key Features of Pycaw:
 
 
 
-
+Hand Landmarks
 
 <div align="center">
     <img alt="mediapipeLogo" src="Images/hand_landmarks.png" height="200 x" />

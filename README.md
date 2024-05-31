@@ -62,10 +62,10 @@ Key Features of Pycaw:
 Hand Landmarks:
 
 <div align="center">
-    <img alt="mediapipeLogo" src="Images/hand_landmarks.png" height="200 x" />    
+    <img alt="handlandmarks" src="Images/hand_landmarks.png" height="200 x" />    
 </div>
 <div align="center">
-    <img alt="mediapipeLogo" src="images/htm.jpg" height="360 x" weight ="640 x" />
+    <img alt="handgestures" src="images/hand_gestures.jpg" height="360 x" weight ="640 x" />
 </div>
 
 <br>

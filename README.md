@@ -1,12 +1,12 @@
 
 <div align="center">
-  <h1>Gesture Volume Control Using OpenCV and MediaPipe</h1>
+  <h1>Gesture Volume Control Using Python</h1>
   <img alt="output" src="images/output.gif" />
  </div>
 
-> This Project uses OpenCV and MediaPipe to Control system volume 
+> This Project uses Python and some modules to control System Volume 
 
-## 💾 REQUIREMENTS
+##  REQUIREMENTS
 + opencv-python
 + mediapipe
 + comtypes
@@ -17,46 +17,58 @@
 pip install -r requirements.txt
 ```
 ***
+### OPENCV-PYTHON
+
+OpenCV (Open Source Computer Vision Library) is an open-source computer vision and machine learning software library. It provides a common infrastructure for computer vision applications and accelerates the use of machine perception in commercial products. OpenCV was designed for computational efficiency and with a strong focus on real-time applications.
+
+Key Features of OpenCV:
+>Image Processing,Video Processing,Object Detection and Tracking, 2D Features Framework.
+
+
 ### MEDIAPIPE
-<div align="center">
-  <img alt="mediapipeLogo" src="images/mediapipe.png" />
-</div>
 
-> MediaPipe offers open source cross-platform, customizable ML solutions for live and streaming media.
+Mediapipe is an open-source framework developed by Google that provides a comprehensive set of tools and solutions for building perception pipelines. It is designed to facilitate the development of machine learning applications that process live and static media data, such as videos and images. Mediapipe is particularly powerful for tasks that involve real-time processing on mobile devices, web, and desktops.
 
-#### Hand Landmark Model
-After the palm detection over the whole image our subsequent hand landmark model performs precise keypoint localization of 21 3D hand-knuckle coordinates inside the detected hand regions via regression, that is direct coordinate prediction. The model learns a consistent internal hand pose representation and is robust even to partially visible hands and self-occlusions.
+Key Features of Mediapipe:
+>Initialize Mediapipe Hands Solution, Process Frames, Volume Control Logic and Display Results.
 
-To obtain ground truth data, we have manually annotated ~30K real-world images with 21 3D coordinates, as shown below (we take Z-value from image depth map, if it exists per corresponding coordinate). To better cover the possible hand poses and provide additional supervision on the nature of hand geometry, we also render a high-quality synthetic hand model over various backgrounds and map it to the corresponding 3D coordinates.<br>
 
-#### Solution APIs
-##### Configuration Options
-> Naming style and availability may differ slightly across platforms/languages.
+### COMTYPES
 
-+ <b>STATIC_IMAGE_MODE</b><br>
-If set to false, the solution treats the input images as a video stream. It will try to detect hands in the first input images, and upon a successful detection further localizes the hand landmarks. In subsequent images, once all max_num_hands hands are detected and the corresponding hand landmarks are localized, it simply tracks those landmarks without invoking another detection until it loses track of any of the hands. This reduces latency and is ideal for processing video frames. If set to true, hand detection runs on every input image, ideal for processing a batch of static, possibly unrelated, images. Default to false.
+comtypes is a pure Python library that allows for the creation and management of COM (Component Object Model) objects. It provides a way to interact with COM interfaces and automate tasks in Windows applications. This is particularly useful for controlling system-level features like audio volume, which is where comtypes is used in conjunction with the pycaw (Python Core Audio Windows) library to control system audio settings.
 
-+ <b>MAX_NUM_HANDS</b><br>
-Maximum number of hands to detect. Default to 2.
+Key Features of Comtypes:
+>Initialize Audio Interface, Capture Video and Detect Hand Gestures and Map Gestures to Volume Control.
 
-+ <b>MODEL_COMPLEXITY</b><br>
-Complexity of the hand landmark model: 0 or 1. Landmark accuracy as well as inference latency generally go up with the model complexity. Default to 1.
 
-+ <b>MIN_DETECTION_CONFIDENCE</b><br>
-Minimum confidence value ([0.0, 1.0]) from the hand detection model for the detection to be considered successful. Default to 0.5.
+### NUMPY
 
-+ <b>MIN_TRACKING_CONFIDENCE:</b><br>
-Minimum confidence value ([0.0, 1.0]) from the landmark-tracking model for the hand landmarks to be considered tracked successfully, or otherwise hand detection will be invoked automatically on the next input image. Setting it to a higher value can increase robustness of the solution, at the expense of a higher latency. Ignored if static_image_mode is true, where hand detection simply runs on every image. Default to 0.5.
+NumPy (Numerical Python) is a fundamental package for scientific computing in Python. It provides support for arrays, matrices, and a large collection of mathematical functions to operate on these data structures efficiently. In the context of a hand gesture volume controller, NumPy is used to perform mathematical operations that facilitate the detection and interpretation of hand gestures.
 
-<br>
+Key Features of Numpy:
+>Calculate Distances and Map Distances to Volume Levels.
 
-Source: [MediaPipe Hands Solutions](https://google.github.io/mediapipe/solutions/hands#python-solution-api)
+
+### PYCAW
+
+pycaw (Python Core Audio Windows) is a Python library that provides access to Windows Core Audio APIs, allowing you to control audio settings on Windows. It is especially useful for tasks like adjusting the system volume, muting audio, and retrieving audio device information. In the context of a hand gesture volume controller, pycaw enables you to change the system volume based on hand gestures detected by a webcam.
+
+Key Features of Pycaw:
+>Access Audio Devices and Integration with Other Libraries.
+
+
+
+
 
 <div align="center">
     <img alt="mediapipeLogo" src="images/hand_landmarks_docs.png" height="200 x    " />
     <img alt="mediapipeLogo" src="images/htm.jpg" height="360 x" weight ="640 x" />
     
 </div>
+
+
+<br>
+
 
 
 ## 📝 CODE EXPLANATION

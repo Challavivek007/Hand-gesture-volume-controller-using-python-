@@ -61,7 +61,7 @@ Key Features of Pycaw:
 
 
 <div align="center">
-    <img alt="mediapipeLogo" src="images/hand_landmarks_docs.png" height="200 x    " />
+    <img alt="mediapipeLogo" src="images/hand_landmarks.png" height="200 x    " />
     <img alt="mediapipeLogo" src="images/htm.jpg" height="360 x" weight ="640 x" />
     
 </div>

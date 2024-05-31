@@ -56,16 +56,17 @@ pycaw (Python Core Audio Windows) is a Python library that provides access to Wi
 Key Features of Pycaw:
 >Access Audio Devices and Integration with Other Libraries.
 
+***
+### Gestures info
 
-
-Hand Landmarks
+Hand Landmarks:
 
 <div align="center">
-    <img alt="mediapipeLogo" src="Images/hand_landmarks.png" height="200 x" />
-    <img alt="mediapipeLogo" src="images/htm.jpg" height="360 x" weight ="640 x" />
-    
+    <img alt="mediapipeLogo" src="Images/hand_landmarks.png" height="200 x" />    
 </div>
-
+<div align="center">
+    <img alt="mediapipeLogo" src="images/htm.jpg" height="360 x" weight ="640 x" />
+</div>
 
 <br>
 

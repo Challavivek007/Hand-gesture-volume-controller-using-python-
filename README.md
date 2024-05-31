@@ -1,9 +1,8 @@
 
 <div align="center">
   <h1>Hand Gesture Volume Control Using Python</h1>
-  <img alt="output" src="Images/HG.gif" />
  </div>
-
+ 
 > This Project uses Python and some modules to control System Volume 
 
 ##  REQUIREMENTS
@@ -198,6 +197,13 @@ Closing webCam
 cam.release()
 cv2.destroyAllWindows()
 ```
+***
+
+Result
+<div align="center">
+  <img alt="output" src="Images/HG.gif" />
+ </div>
+ 
 ***
 
 <div align = "center">
